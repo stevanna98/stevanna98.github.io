@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Graph-Structured Variational Autoencoders to Model Brain Functional Connectivity: A New Normative Framework Applied to Mood Disorders.">
+<meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#ffffff">
+<title>SET-VAE — Normative modelling of brain connectivity</title>
+<link rel="icon" href="../icon.svg" type="image/svg+xml"><link rel="stylesheet" href="../style.css">
+</head><body class="project-page setvae-project">
+<a class="skip" href="#main">Skip to content</a>
+<header class="header"><div class="header-inner"><a class="mark" href="../index.html" aria-label="Portfolio home"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 5c3 0 4 14 7 15s14-8 16-5-9 13-8 16 16 3 16 6-15 4-17 7 6 14 3 16-12-10-15-9-5 15-8 14-2-16-5-18S6 53 4 50s11-11 10-14S0 29 1 26s16 0 18-3S18 5 22 5s7 16 10 0Z" transform="translate(2 -2) scale(.94)"/></svg></a><span class="template-label">SELECTED RESEARCH / 03</span><a class="contact-button" href="../index.html#contact">Get in touch <span aria-hidden="true">↗</span></a></div></header>
+<main id="main" class="wrap">
+<section class="project-hero" aria-labelledby="project-title">
+<a class="back-link" href="../index.html#work">← All projects</a>
+<p class="tiny-note">SET-VAE / NORMATIVE MODELLING</p>
+<h1 id="project-title">Learning a reference for<br><em>brain connectivity.</em></h1>
+<p class="project-deck">Graph-Structured Variational Autoencoders to Model Brain Functional Connectivity: A New Normative Framework Applied to Mood Disorders.</p>
+<p class="project-authors">Stefano Vannoni · Eleonora De Giorgis · Inês Won Sampaio · Paolo Brambilla · Eleonora Maggioni</p>
+<div class="project-facts"><span>748 healthy reference participants</span><span>379 brain regions</span><span>Variational autoencoders</span></div>
+</section>
+<section class="project-section project-overview" aria-labelledby="question-title"><h2 id="question-title">The question</h2><p>People with the same diagnosis can show very different patterns of brain connectivity. Can a model learn a healthy reference and use reconstruction differences to explore this variability? SET-VAE adapts a Set Transformer to a variational framework, learning from healthy participants without diagnostic labels.</p></section>
+<section class="project-section" aria-labelledby="method-title">
+<div class="project-section-heading"><h2 id="method-title">Learn the reference. <em>Explore deviations.</em></h2><span class="small-meta">THE METHOD / THREE STEPS</span></div>
+<div class="method-grid">
+<article><span class="method-number">01 / REPRESENT</span><h3>Keep the whole profile</h3><p>Resting-state fMRI is converted into functional connectivity matrices. Each region retains its full connectivity profile, while the strongest positive connections define subject-specific graphs at three densities.</p></article>
+<article><span class="method-number">02 / RECONSTRUCT</span><h3>Combine two views</h3><p>Both encoder and decoder combine attention across all regions with attention masked by the connectivity graph. A probabilistic latent representation links them, allowing SET-VAE to reconstruct each participant’s network.</p></article>
+<article><span class="method-number">03 / EVALUATE</span><h3>Test the reference</h3><p>SET-VAE is compared with GCN-VAE and GAT-VAE using shared nested cross-validation on HCP-YA. The trained models are then applied without retraining to an independent cohort with healthy controls and people with mood disorders.</p></article>
+</div></section>
+<figure class="pipeline-figure">
+<div class="figure-heading"><span class="small-meta">THE COMPLETE WORKFLOW</span><a href="../assets/set-vae-pipeline.png" target="_blank" rel="noopener">Enlarge figure ↗</a></div>
+<a class="figure-image" href="../assets/set-vae-pipeline.png" target="_blank" rel="noopener" aria-label="Open the full-size SET-VAE pipeline figure in a new tab"><img src="../assets/set-vae-pipeline.png" width="2400" height="1352" alt="SET-VAE workflow: construct functional connectivity from 748 healthy HCP-YA participants, compare SET-VAE, GCN-VAE and GAT-VAE, evaluate reconstruction, network topology and latent representations, then apply frozen models to 15 healthy controls and 15 patients with mood disorders."></a>
+<figcaption><span><strong>From healthy-reference learning to external evaluation.</strong> The pipeline compares complete VAE architectures and examines reconstruction, network topology and latent representations.</span><a href="../assets/set-vae-pipeline.pdf" target="_blank" rel="noopener">View pipeline as PDF ↗</a></figcaption>
+</figure>
+<section class="attention-detail" aria-labelledby="attention-title">
+<div class="attention-intro"><span class="small-meta">INSIDE THE MODEL</span><h2 id="attention-title">Global context,<br><em>guided by connectivity.</em></h2><p>Standard attention exchanges information across all regions. FC-masked attention restricts interactions to the retained connections, bringing each participant’s graph into the reconstruction process.</p></div>
+<figure class="pipeline-figure attention-figure">
+<div class="figure-heading"><span class="small-meta">THE ATTENTION BLOCKS</span><a href="../assets/set-vae-attention.png" target="_blank" rel="noopener">Enlarge figure ↗</a></div>
+<a class="figure-image" href="../assets/set-vae-attention.png" target="_blank" rel="noopener" aria-label="Open the full-size standard and FC-masked attention blocks in a new tab"><img src="../assets/set-vae-attention.png" width="2400" height="1802" loading="lazy" alt="Comparison of standard multi-head attention and FC-masked attention, including residual connections, normalisation, feed-forward layers and the construction of a connectivity-derived mask at 10, 20 or 30 percent density."></a>
+<figcaption><span><strong>Two complementary attention blocks.</strong> Unrestricted interactions followed by a connectivity-derived mask.</span><a href="../assets/set-vae-attention.pdf" target="_blank" rel="noopener">View blocks as PDF ↗</a></figcaption>
+</figure></section>
+<section class="project-section project-results" aria-labelledby="results-title">
+<div><span class="small-meta">WHAT EMERGED</span><h2 id="results-title">A closer reconstruction<br>of <em>healthy networks.</em></h2></div>
+<div class="results-copy"><p>SET-VAE achieved the lowest mean reconstruction error at all three connectivity densities. At 20% density, RMSE was approximately 13% lower than GAT-VAE and 32% lower than GCN-VAE, alongside better preservation of most network properties.</p><p>In the external sample of 15 controls and 15 people with bipolar or major depressive disorder, patients showed greater reconstruction discrepancies. This provides an exploratory application of the healthy reference to mood-disorder research.</p><p class="results-note">The comparison evaluates complete architectures, including different decoders. The small external sample and demographic and acquisition differences limit clinical interpretation; these findings do not establish individual diagnostic performance.</p></div>
+</section>
+<div class="project-end"><span class="small-meta">GENERATIVE MODELS · CONNECTOMICS · MOOD DISORDERS</span><a href="../index.html#work">Back to selected work ↗</a></div>
+</main>
+<footer class="footer wrap"><span>STEFANO VANNONI / SELECTED RESEARCH</span><span>SET-VAE · Project 03</span><a href="#main">Back to top ↑</a></footer>
+</body></html>
