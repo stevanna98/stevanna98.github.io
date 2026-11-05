@@ -2,12 +2,19 @@
 
 Buildless static portfolio. Serve dist/ with a static web server; no build step is required.
 
-- dist/index.html: introduction, three equal-size project cards, selected publications, experience, personal interests, CV and contacts.
+- dist/index.html: introduction, research approach, three full-width research
+  compositions, selected publications, education timeline, biography, interests,
+  CV and contacts.
 - dist/projects/: PRONIA, BGT-ESRE and SET-VAE project pages.
 - dist/assets/: user-supplied research figures and conference poster, rendered images and original PDFs.
 - dist/assets/cinema.png and magic.png: user-supplied personal-interest illustrations,
   served through optimized WebP copies with the original PNGs as fallbacks.
 - dist/style.css: shared responsive styling.
+- dist/script.js: accessible mobile navigation, reading progress, progressive
+  reveals and an original decorative connectome animation. Content remains
+  readable without JavaScript; reduced-motion preferences are respected.
+- dist/assets/fonts/: locally served Manrope and IBM Plex Mono fonts, with their
+  included SIL Open Font License files.
 - dist/assets/institutions/: official institution logos used in the education and
   research timeline (Buzzi, UniFi, Politecnico di Milano and Imperial).
 
@@ -17,6 +24,13 @@ and Islem Rekik's name were checked on https://basira-lab.com/. Institution logo
 come from the public headers of their official websites:
 https://tulliobuzzi.edu.it/, https://www.unifi.it/, https://www.polimi.it/ and
 https://www.imperial.ac.uk/.
+
+The visual redesign uses graphite, warm ivory and blue, with original network
+graphics. All pre-existing descriptive paragraphs and scientific project content
+were retained. The first biography paragraph introduces the research approach.
+Stylesheet and script references include content fingerprints to avoid stale
+assets after publication; update these fingerprints in all four HTML pages when
+editing the shared assets.
 
 The CV links to the Google Drive URL provided by Stefano. Contact details and professional profiles are user-supplied. Biography and experience are based on the supplied CV; no expected PhD completion date is stated. NeurIPS 2026 acceptance was explicitly confirmed by Stefano.
 
