@@ -15,15 +15,15 @@
 <h1 id="project-title">Learning a reference for<br><em>brain connectivity.</em></h1>
 <p class="project-deck">Graph-Structured Variational Autoencoders to Model Brain Functional Connectivity: A New Normative Framework Applied to Mood Disorders.</p>
 <p class="project-authors">Stefano Vannoni et al.</p>
-<div class="project-facts"><span>748 healthy reference participants</span><span>Brain connectomics</span><span>Normative modeling</span></span>Variational autoencoders</span></div>
+<div class="project-facts"><span>748 healthy reference participants</span><span>Brain connectomics</span><span>Normative modeling</span><span>Variational autoencoders</span></div>
 </section>
-<section class="project-section project-overview" aria-labelledby="question-title"><h2 id="question-title">The question</h2><p>People with the same diagnosis can show very different patterns of brain connectivity. Can a model learn a healthy reference and use reconstruction differences to explore this variability? SET-VAE adapts a Set Transformer to a variational framework, learning from healthy participants without diagnostic labels.</p></section>
+<section class="project-section project-overview" aria-labelledby="question-title"><h2 id="question-title">The question</h2><p>Psychiatric disorders are heterogeneous: individuals with the same diagnosis may show markedly different patterns of brain connectivity. Rather than assuming a single disorder-specific pattern, SET-VAE combines standard and FC-masked attention within a variational autoencoder trained exclusively on healthy participants. The resulting healthy reference supports exploratory investigation of reconstruction differences in an independent mood-disorder cohort, without training the model to distinguish diagnostic groups.</p></section>
 <section class="project-section" aria-labelledby="method-title">
 <div class="project-section-heading"><h2 id="method-title">Learn the reference. <em>Explore deviations.</em></h2><span class="small-meta">THE METHOD / THREE STEPS</span></div>
 <div class="method-grid">
 <article><span class="method-number">01 / REPRESENT</span><h3>Keep the whole profile</h3><p>Resting-state fMRI is converted into functional connectivity matrices. Each region retains its full connectivity profile, while the strongest positive connections define subject-specific graphs at three densities.</p></article>
 <article><span class="method-number">02 / RECONSTRUCT</span><h3>Combine two views</h3><p>Both encoder and decoder combine attention across all regions with attention masked by the connectivity graph. A probabilistic latent representation links them, allowing SET-VAE to reconstruct each participant’s network.</p></article>
-<article><span class="method-number">03 / EVALUATE</span><h3>Test the reference</h3><p>SET-VAE is compared with GCN-VAE and GAT-VAE using shared nested cross-validation on HCP-YA. The trained models are then applied without retraining to an independent cohort with healthy controls and people with mood disorders.</p></article>
+<article><span class="method-number">03 / EVALUATE</span><h3>Test the reference</h3><p>SET-VAE is compared with two different graph-based models, GCN-VAE and GAT-VAE, using shared nested cross-validation on HCP-YA. The trained models are then applied without retraining to an independent cohort with healthy controls and people with mood disorders.</p></article>
 </div></section>
 <figure class="pipeline-figure">
 <div class="figure-heading"><span class="small-meta">THE COMPLETE WORKFLOW</span><a href="../assets/set-vae-pipeline.png" target="_blank" rel="noopener">Enlarge figure ↗</a></div>
