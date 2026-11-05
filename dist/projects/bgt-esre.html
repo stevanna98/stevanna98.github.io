@@ -16,20 +16,20 @@
 <p class="project-deck">Teaching graph attention to account for the balance between the anatomical cost of a brain connection and its contribution to network communication.</p>
 <p class="project-authors">Stefano Vannoni et al.</p>
 <a class="project-repo-link" href="https://github.com/basiralab/BGT-ESRE" target="_blank" rel="noopener">Explore the code on GitHub <span aria-hidden="true">↗</span></a>
-<div class="project-facts"><span>BGT-ESRE</span><span>Brain connectomics</span><span>Graph representation learning</span></div>
+<div class="project-facts"><span>Brain connectomics</span><span>Brain Graph Transformer</span><span>Graph representation learning</span></div>
 </section>
-<section class="project-section project-overview" aria-labelledby="question-title"><h2 id="question-title">The idea</h2><p>Brain connections balance wiring cost with communication value. BGT-ESRE brings this principle into a Graph Transformer: each connection’s economy directly shapes how two brain regions attend to one another, giving the model a biologically motivated way to learn from brain networks.</p></section>
+<section class="project-section project-overview" aria-labelledby="question-title"><h2 id="question-title">The idea</h2><p>Brain connections balance wiring cost with network communication value. Brain Graph Transformer with EcoSpace Rotary Encoding (BGT-ESRE) brings this principle into a Graph Transformer: each connection’s economy directly shapes how two brain regions attend to one another, giving the model a biologically motivated way to learn from brain networks.</p></section>
 <section class="project-section" aria-labelledby="method-title">
 <div class="project-section-heading"><h2 id="method-title">Brain economy, <em>built into attention.</em></h2><span class="small-meta">THE METHOD / THREE STEPS</span></div>
 <div class="method-grid">
 <article><span class="method-number">01 / WEIGHT</span><h3>Represent the trade-off</h3><p>Connectivity strength is weighted by an exponential penalty on anatomical distance. This creates an economy-aligned graph in which strong, shorter connections carry more weight.</p></article>
-<article><span class="method-number">02 / MAP</span><h3>Construct the ecospace</h3><p>Each connection receives a two-dimensional coordinate, calculated from a pair of graph communication measures. These coordinates describe its role in the economy-aligned network.</p></article>
+<article><span class="method-number">02 / MAP</span><h3>Construct the ecospace</h3><p>Each connection receives a two-dimensional coordinate, calculated from a pair of graph topological measures. These coordinates describe its role in the economy-aligned network.</p></article>
 <article><span class="method-number">03 / ATTEND</span><h3>Rotate the interaction</h3><p>EcoSpace Rotary Encoding uses those coordinates to rotate query and key vectors in opposite directions. Connection economy therefore enters the attention computation itself, shaping the representations learned for classification.</p></article>
 </div></section>
 <figure class="pipeline-figure">
-<div class="figure-heading"><span class="small-meta">THE CONFERENCE POSTER / NeurIPS 2026</span><a href="../assets/bgt-esre-poster.png" target="_blank" rel="noopener">Enlarge poster ↗</a></div>
-<a class="figure-image" href="../assets/bgt-esre-poster.png" target="_blank" rel="noopener" aria-label="Open the full-size NeurIPS 2026 conference poster in a new tab"><img src="../assets/bgt-esre-poster.png" width="2400" height="1697" alt="Brain Economy-Aligned Graph Transformer conference poster, presenting the motivation, economy-aligned graph and ecospace, asymmetric rotary attention architecture, comparisons with eight baselines on HCP-YA and ABIDE I, ablation studies, and discussion."></a>
-<figcaption><span><strong>The complete research story.</strong> Motivation, model architecture and experimental results in the poster prepared for NeurIPS 2026.</span><a href="../assets/bgt-esre-poster.pdf" target="_blank" rel="noopener">View poster as PDF ↗</a></figcaption>
+<div class="figure-heading"><span class="small-meta">THE CONFERENCE POSTER / NeurIPS 2026</span><a href="../assets/poster_cropped.png" target="_blank" rel="noopener">Enlarge poster ↗</a></div>
+<a class="figure-image" href="../assets/poster_cropped.png" target="_blank" rel="noopener" aria-label="Open the full-size NeurIPS 2026 conference poster in a new tab"><img src="../assets/poster_cropped.png" width="2400" height="1697" alt="Brain Economy-Aligned Graph Transformer conference poster, presenting the motivation, economy-aligned graph and ecospace, asymmetric rotary attention architecture, comparisons with eight baselines on HCP-YA and ABIDE I, ablation studies, and discussion."></a>
+<figcaption><span><strong>The complete research story.</strong> Motivation, model architecture and experimental results in the poster prepared for NeurIPS 2026.</span><a href="../assets/poster_cropped.pdf" target="_blank" rel="noopener">View poster as PDF ↗</a></figcaption>
 </figure>
 <section class="project-section project-results" aria-labelledby="results-title">
 <div><span class="small-meta">WHAT EMERGED</span><h2 id="results-title">A useful prior for<br><em>brain graph learning.</em></h2></div>
