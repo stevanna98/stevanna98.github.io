@@ -6,6 +6,15 @@ Buildless static portfolio. Serve dist/ with a static web server; no build step 
 - dist/projects/: PRONIA, BGT-ESRE and SET-VAE project pages.
 - dist/assets/: user-supplied research figures and conference poster, rendered images and original PDFs.
 - dist/style.css: shared responsive styling.
+- dist/assets/institutions/: official institution logos used in the education and
+  research timeline (Buzzi, UniFi, Politecnico di Milano and Imperial).
+
+The education and research timeline follows the dates supplied by Stefano. The
+school's official name was checked on https://tulliobuzzi.edu.it/; the BASIRA Lab
+and Islem Rekik's name were checked on https://basira-lab.com/. Institution logos
+come from the public headers of their official websites:
+https://tulliobuzzi.edu.it/, https://www.unifi.it/, https://www.polimi.it/ and
+https://www.imperial.ac.uk/.
 
 The CV links to the Google Drive URL provided by Stefano. Contact details and professional profiles are user-supplied. Biography and experience are based on the supplied CV; no expected PhD completion date is stated. NeurIPS 2026 acceptance was explicitly confirmed by Stefano.
 
