@@ -5,6 +5,8 @@ Buildless static portfolio. Serve dist/ with a static web server; no build step 
 - dist/index.html: introduction, three equal-size project cards, selected publications, experience, personal interests, CV and contacts.
 - dist/projects/: PRONIA, BGT-ESRE and SET-VAE project pages.
 - dist/assets/: user-supplied research figures and conference poster, rendered images and original PDFs.
+- dist/assets/cinema.png and magic.png: user-supplied personal-interest illustrations,
+  served through optimized WebP copies with the original PNGs as fallbacks.
 - dist/style.css: shared responsive styling.
 - dist/assets/institutions/: official institution logos used in the education and
   research timeline (Buzzi, UniFi, Politecnico di Milano and Imperial).
