@@ -20,12 +20,12 @@
 </section>
 <section class="project-section project-overview" aria-labelledby="question-title">
 <h2 id="question-title">The question</h2>
-<p>Can we reveal meaningful patterns across people, beyond diagnostic labels? This work explores a psychiatric cohort using environmental risk factors, resting-state fMRI connectivity, and their combination, spanning healthy controls, people at clinical high risk of psychosis, and people with recent-onset psychosis or depression.</p>
+<p>Can we reveal meaningful patterns across people, beyond diagnostic labels? This work explores a multi-site dataset using environmental risk factors, resting-state fMRI connectivity, and their combination, spanning healthy controls, people at clinical high risk of psychosis, and people with recent-onset psychosis or depression.</p>
 </section>
 <section class="project-section" aria-labelledby="method-title">
-<div class="project-section-heading"><h2 id="method-title">From data to a <em>graph of subjects.</em></h2><span class="small-meta">THE METHOD / THREE STEPS</span></div>
+<div class="project-section-heading"><h2 id="method-title">From data to a <em>graph of people.</em></h2><span class="small-meta">THE METHOD / THREE STEPS</span></div>
 <div class="method-grid">
-<article><span class="method-number">01 / BUILD</span><h3>Find the structure</h3><p>After harmonising fMRI connectivity across sites, Mapper turns participant similarities into a graph of overlapping groups. Its settings are tuned through unsupervised subsampling, without using diagnoses to build the map.</p></article>
+<article><span class="method-number">01 / BUILD</span><h3>Find the structure</h3><p>Mapper builds separate graphs from environmental features, fMRI connectivity harmonized across sites, and their combination. Each node groups participants with similar profiles, and nodes are connected when they share participants. Filter functions and cover settings are selected through subsampling within the Discovery cohort, without using diagnostic labels.</p></article>
 <article><span class="method-number">02 / INTERPRET</span><h3>Make patterns readable</h3><p>Community detection identifies groups in the graph. A two-step feature-importance analysis connects these communities back to the original measurements, helping explain what shapes their organisation.</p></article>
 <article><span class="method-number">03 / REPLICATE</span><h3>Place new people</h3><p>Independent participants are mapped onto the fixed discovery graph, without rebuilding it. Associations between graph communities and clinical groups are then compared across the two cohorts.</p></article>
 </div>
