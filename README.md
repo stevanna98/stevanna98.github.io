@@ -3,10 +3,12 @@
 Buildless static portfolio. Serve dist/ with a static web server; no build step is required.
 
 - dist/index.html: introduction, research approach, three full-width research
-  compositions, selected publications, education timeline, biography, interests,
+  compositions, selected publications, academic service, education timeline, biography, interests,
   CV and contacts.
 - dist/projects/: PRONIA, BGT-ESRE and SET-VAE project pages.
 - dist/assets/: user-supplied research figures and conference poster, rendered images and original PDFs.
+- dist/assets/reviewer_confirmation_letter_neurips.pdf: user-supplied confirmation
+  of service as a Main Reviewer for NeurIPS 2026, linked from Academic service.
 - dist/assets/cinema.png and magic.png: user-supplied personal-interest illustrations,
   served through optimized WebP copies with the original PNGs as fallbacks.
 - dist/style.css: shared responsive styling.
